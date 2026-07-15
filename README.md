@@ -34,3 +34,4 @@ This project is licensed under the MIT License.
 ## Status
 
 🚧 Early development (v0.1.0-alpha)
+![Tests](https://github.com/hinodepeter-hub/FluteBuilderStudio/actions/workflows/tests.yml/badge.svg)
