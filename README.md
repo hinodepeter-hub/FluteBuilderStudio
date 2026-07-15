@@ -35,3 +35,26 @@ This project is licensed under the MIT License.
 
 🚧 Early development (v0.1.0-alpha)
 ![Tests](https://github.com/hinodepeter-hub/FluteBuilderStudio/actions/workflows/tests.yml/badge.svg)
+## Project Status
+
+Current release:
+
+* **v0.1.0-alpha**
+
+Current milestone:
+
+* **Core Domain Model**
+
+Implemented:
+
+* Project
+* Material
+
+In progress:
+
+* Instrument
+* Embouchure
+* FingerHole
+* Measurement
+* Calibration
+
