@@ -1,3 +1,6 @@
+from pathlib import Path
+from uuid import UUID
+
 from flutebuilder.models.project import Project
 
 
@@ -18,3 +21,21 @@ def project_to_dict(project: Project) -> dict:
             ),
         },
     }
+
+
+def dict_to_project(data: dict) -> Project:
+    """Convert a dictionary into a Project instance."""
+
+    project = data["project"]
+
+    return Project(
+        name=project["name"],
+        project_id=UUID(project["project_id"]),
+        version=project["version"],
+        description=project["description"],
+        project_path=(
+            Path(project["project_path"])
+            if project["project_path"] is not None
+            else None
+        ),
+    )
