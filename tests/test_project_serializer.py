@@ -4,6 +4,7 @@ from flutebuilder.serialization.project_serializer import (
     dict_to_project,
     project_to_dict,
     save_project,
+    load_project,
 )
 
 
@@ -37,3 +38,19 @@ def test_save_project(tmp_path: Path):
     save_project(project, filename)
 
     assert filename.exists()
+
+
+def test_save_and_load_project(tmp_path: Path):
+    original = Project(name="Demo Project")
+
+    filename = tmp_path / "demo.fbs"
+
+    save_project(original, filename)
+    loaded = load_project(filename)
+
+    assert loaded.name == original.name
+    assert loaded.project_id == original.project_id
+    assert loaded.version == original.version
+    assert loaded.description == original.description
+    assert loaded.project_path == original.project_path
+

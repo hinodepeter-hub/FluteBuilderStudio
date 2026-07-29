@@ -54,3 +54,11 @@ def save_project(project: Project, filename: str) -> None:
             sort_keys=False,
             allow_unicode=True,
         )
+
+def load_project(filename: str) -> Project:
+    """Load a Project from a .fbs (YAML) file."""
+
+    with open(filename, "r", encoding="utf-8") as file:
+        data = yaml.safe_load(file)
+
+    return dict_to_project(data)
