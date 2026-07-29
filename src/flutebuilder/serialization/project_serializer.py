@@ -1,3 +1,4 @@
+import yaml
 from pathlib import Path
 from uuid import UUID
 
@@ -39,3 +40,17 @@ def dict_to_project(data: dict) -> Project:
             else None
         ),
     )
+
+
+def save_project(project: Project, filename: str) -> None:
+    """Save a Project to a .fbs (YAML) file."""
+
+    data = project_to_dict(project)
+
+    with open(filename, "w", encoding="utf-8") as file:
+        yaml.safe_dump(
+            data,
+            file,
+            sort_keys=False,
+            allow_unicode=True,
+        )

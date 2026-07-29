@@ -1,7 +1,9 @@
+from pathlib import Path
 from flutebuilder.models.project import Project
 from flutebuilder.serialization.project_serializer import (
     dict_to_project,
     project_to_dict,
+    save_project,
 )
 
 
@@ -26,3 +28,12 @@ def test_project_round_trip():
     assert loaded.version == original.version
     assert loaded.description == original.description
     assert loaded.project_path == original.project_path
+
+def test_save_project(tmp_path: Path):
+    project = Project(name="Demo")
+
+    filename = tmp_path / "demo.fbs"
+
+    save_project(project, filename)
+
+    assert filename.exists()
