@@ -1,60 +1,44 @@
+# FluteBuilderStudio v0.3.0-alpha
 
-# Flute Builder Studio
+This release introduces the first implementation of the FluteBuilderStudio project file format.
 
-**Flute Builder Studio (FBS)** is an open-source desktop application for designing, documenting, building and tuning bamboo flutes.
+## ✨ New features
 
-The project aims to provide a complete digital workshop for flute makers, combining instrument design, manufacturing documentation, tuning, technical drawings and project management in a single application.
+### Project serialization
 
-## Planned Features
+- Added project serialization to Python dictionaries
+- Added deserialization from dictionaries back to Project objects
+- Added saving projects to YAML (.fbs) files
+- Added loading projects from YAML (.fbs) files
 
-- 🎋 Bamboo flute project management
-- 📐 Technical drawings with dimensions
-- 🎵 Tone hole editor
-- 🎼 Fingering charts
-- 🎯 Tuning measurements
-- 📄 Birth certificate generation (PDF/DOCX)
-- 🛠️ Workshop journal
-- 📷 Photo documentation
-- 📊 Manufacturing history
-- 📚 Knowledge base of experiments
+### Project file format
 
-## Technology
+- Introduced the initial `.fbs` project format
+- Versioned project structure for future compatibility
 
-- Python 3.12+
-- PySide6
-- Pydantic v2
-- ReportLab
-- python-docx
-- pytest
+### Testing
 
-## License
+- Added unit tests for serialization
+- Added round-trip serialization tests
+- Added save/load tests
+- All tests passing
 
-This project is licensed under the MIT License.
-
-## Status
-
-🚧 Early development (v0.3.0-alpha)
-![Tests](https://github.com/hinodepeter-hub/FluteBuilderStudio/actions/workflows/tests.yml/badge.svg)
-## Project Status
-
-Current release:
-
-* **v0.3.0-alpha**
-
-Current milestone:
-
-* **Technical Drawing**
+## Project status
 
 Implemented:
 
-* Project
-* Material
+- ✅ Core domain models
+- ✅ Project serialization
+- ✅ YAML project file format
+- ✅ Continuous Integration (GitHub Actions)
 
-In progress:
+## Next milestone
 
-* Instrument
-* Embouchure
-* FingerHole
-* Measurement
-* Calibration
+**FBS-006 – Technical Drawing**
 
+Planned features:
+
+- flute drawing
+- dimensions
+- SVG export
+- PDF export
