@@ -1,0 +1,73 @@
+id: FBS-REF-0003
+name: "Vrubová flétna PVC – Prototyp VF-001"
+instrument_id: VF-001
+material: PVC
+type: "Vrubová flétna"
+
+dimensions:
+  outer_diameter_mm: 25
+  inner_diameter_mm: 23
+  total_length_mm: 455
+
+mouthpiece:
+  notch_type: V
+  notch_depth_mm: 8
+  notch_width_mm: 10
+
+tuning:
+  fundamental_note: E4
+  fundamental_frequency_hz: 329.63
+  scale:
+    - note: E4
+      frequency_hz: 329.63
+      fingering: "vše zakryto"
+    - note: F4
+      frequency_hz: 349.23
+      fingering: "otvor 1"
+    - note: G4
+      frequency_hz: 392.00
+      fingering: "otvory 1–2"
+    - note: A4
+      frequency_hz: 440.00
+      fingering: "otvory 1–3"
+    - note: B4
+      frequency_hz: 493.88
+      fingering: "otvory 1–4"
+    - note: C♯5
+      frequency_hz: 554.37
+      fingering: "otvory 1–5"
+
+finger_holes:
+  - number: 1
+    distance_from_bottom_mm: 57
+    diameter_mm: 9
+    note: F4
+  - number: 2
+    distance_from_bottom_mm: 107
+    diameter_mm: 9
+    note: G4
+  - number: 3
+    distance_from_bottom_mm: null
+    diameter_mm: 6
+    note: A4
+  - number: 4
+    distance_from_bottom_mm: null
+    diameter_mm: 6
+    note: B4
+  - number: 5
+    distance_from_bottom_mm: 260
+    distance_from_mouthpiece_mm: 195
+    diameter_mm: 5
+    note: C♯5
+
+status: completed_prototype
+
+notes:
+  - "První dva otvory byly rozšířeny na 9 mm."
+  - "Třetí a čtvrtý otvor mají průměr 6 mm."
+  - "Pátý otvor o průměru 5 mm naladil C♯5 bez další úpravy."
+  - "Přidávání dalších otvorů ovlivnilo ladění předchozích."
+  - "Výsledkem není původně zamýšlená stupnice, ale stabilní řada E4 – F4 – G4 – A4 – B4 – C♯5."
+  - "Nástroj je považován za dokončený prototyp VF-001."
+
+photo: VF-001.jpg
